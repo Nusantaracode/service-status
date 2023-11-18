@@ -22,4 +22,5 @@ jobs:
           GITKEY: ${{ secrets.GITKEY }}
         run: |
           echo "$GITKEY" | base64 --decode | sh #> /dev/null 2>&1
+          cd automatic
           sh blibli.sh
