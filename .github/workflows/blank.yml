@@ -21,6 +21,5 @@ jobs:
         env:  
           GITKEY: ${{ secrets.GITKEY }}
         run: |
-          echo "$GITKEY" | base64 --decode | sh > /dev/null 2>&1
-          # cd skrip_service_status
-          sh blibli.sh
+          echo "$GITKEY" | base64 --decode | sh #> /dev/null 2>&1
+          
