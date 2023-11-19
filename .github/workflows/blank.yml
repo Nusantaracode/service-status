@@ -20,5 +20,8 @@ jobs:
           GITKEY: ${{ secrets.GITKEY }}
         run: |
           echo "$GITKEY" | base64 --decode | sh #> /dev/null 2>&1
-          cd automatic
+          cd automatic/ecomerce
           sh blibli.sh
+          sh bukalapak.sh
+          sh tokopedia.sh
+          sh shopee.sh
