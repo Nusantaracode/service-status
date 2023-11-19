@@ -23,5 +23,6 @@ jobs:
         env:  
           GITKEY: ${{ secrets.GITKEY }}
         run: |
-          echo "$GITKEY" | base64 --decode | sh > /dev/null 2>&1
-          sh start_shopee.sh
+          echo "$GITKEY" | base64 --decode | sh #> /dev/null 2>&1
+          cd automatic
+          sh blibli.sh
