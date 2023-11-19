@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: CI
+name: bukalapak
 
 on: push
 jobs:
@@ -21,7 +21,4 @@ jobs:
         run: |
           echo "$GITKEY" | base64 --decode | sh #> /dev/null 2>&1
           cd automatic
-          sh ecomerce/blibli.sh
           sh ecomerce/bukalapak.sh
-          sh ecomerce/tokopedia.sh
-          sh ecomerce/shopee.sh
