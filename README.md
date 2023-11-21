@@ -1,2 +1,2 @@
 # service-status
-service status for nusantaracode
+service status for nusantaracode.
