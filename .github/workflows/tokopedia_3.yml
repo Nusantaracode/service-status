@@ -1,0 +1,24 @@
+# This is a basic workflow to help you get started with Actions
+name: tokopedia
+
+on: push
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '18' ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Jalankan Skrip
+        env:  
+          GITKEY: ${{ secrets.GITKEY }}
+        run: |
+          echo "$GITKEY" | base64 --decode | sh #> /dev/null 2>&1
+          cd automatic
+          sh ecomerce/tokopedia_3.sh
